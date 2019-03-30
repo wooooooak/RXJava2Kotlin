@@ -1,0 +1,15 @@
+# Observable
+RxJava의 Observable은 세 가지 상황에따라 구독자에게 알림을 줄 수 있다.
+* onNext : Observable이 데이터의 발행을 알린다. 이벤트가 발생했을 때라고 봐도 좋다.
+* onComplete : 모든 데이터의 발행을 완료했음을 알린다. onComplete 이벤트는 단 한 번만 발생하며, 발생한 후에는 더 이상 onNext 이벤트가 발생해서는 안된다. 스트림이 끝났음을 의미한다.
+* onError : Observable에서 어떤 이유로 에러가 발생했음을 알린다. onError 이벤트가 발생하면 이후에 onNext 및 onComplete 이벤트가 발생하지 않는다. 즉, Observable의 실행을 종료한다.
+
+Observable이 onNext(), onComplete(), onError() 메서드를 사용할 수 있다는 것이 아니다. 구독되고 있는 것(Observable)이 에러가 나거나, 종료되거나, 또는 데이터가 변경이 되었음 을 알리는 것인 다른것이다(Subject).
+역설적으로 들릴 수 도 있지만, Observable은 subscribe메서드를 가지고 있다.
+(Observable을 create()나 just(), from()등으로 처음 만들면, 이후에 값을 개발자가 임의로 바꿀 수가 없다)
+
+## subscribe() 함수와 Displosable 객체
+RxJava는 내가 동작시키기 원하는 것을 사전에 정의해둔 다음 실제 그것이 실행되는 시점을 조절할 수 있다. 이 때 사용하는 것이 subscribe() 함수다. Observable은 just()등의 팰토리 함수로 데이터 흐름을 정의한 후 subscribe() 함수를 호출해야 실제로 데이터를 발행한다.
+
+`subscribe`는 모두 Disposable 인터페이스의 객체를 리턴한다. `Disposable` 객체는 `dispose()`와 `isDisposed()` 두 개의 메서드를 가지고 있다. `dispose()`는 구독을 해제하는 함수이다. 즉 `Dispasable`객체는 구독자의 구독 상태를 관리한다.
+

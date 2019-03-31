@@ -1,3 +1,5 @@
+package chapter2
+
 import io.reactivex.Observable
 import java.util.concurrent.Callable
 
@@ -7,7 +9,9 @@ fun main() {
         "Hello Callable"
     }
 
-    val source =  Observable.fromCallable(callable)
+    val source = Observable.fromCallable(callable)
     source.subscribe { println(it) }
-    
+    source.subscribe { println(it) }
+    source.subscribe { println(it) }
+
 }

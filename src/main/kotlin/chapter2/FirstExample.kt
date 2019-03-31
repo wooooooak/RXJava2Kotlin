@@ -1,3 +1,5 @@
+package chapter2
+
 import io.reactivex.Observable
 
 class FirstExample {

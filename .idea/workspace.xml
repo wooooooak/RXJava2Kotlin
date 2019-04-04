@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b51b5b17-dff0-4998-b19d-ea4303041b4a" name="Default Changelist" comment="intervalRange(), interval로 intervalRange()함수 만들기">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/chapter4/SwitchMapExample.kt" afterDir="false" />
+    <list default="true" id="b51b5b17-dff0-4998-b19d-ea4303041b4a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/chapter4/GroupByExample.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/META-INF/rx_test.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/META-INF/rx_test.kotlin_module" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -141,7 +142,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/chapter4/SwitchMapExample.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="299">
@@ -149,6 +150,15 @@
               <folding>
                 <element signature="e#18#85#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/chapter4/GroupByExample.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -198,6 +208,7 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/chapter4/RangleExample.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/chapter4/IntervalRangeExample.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/chapter4/SwitchMapExample.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/chapter4/GroupByExample.kt" />
       </list>
     </option>
   </component>
@@ -267,7 +278,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554380859089" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554382597536" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -292,15 +303,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.chapter4.SwitchMapExampleKt">
-    <configuration name="chapter4.INtervalExampleKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Kotlin.chapter4.GroupByExampleKt">
+    <configuration name="chapter4.GroupByExampleKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="rx_test.main" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="chapter4.INtervalExampleKt" />
+      <option name="MAIN_CLASS_NAME" value="chapter4.GroupByExampleKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -360,11 +371,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.chapter4.GroupByExampleKt" />
         <item itemvalue="Kotlin.chapter4.SwitchMapExampleKt" />
         <item itemvalue="Kotlin.chapter4.IntervalRangeExampleKt" />
         <item itemvalue="Kotlin.chapter4.RangleExampleKt" />
         <item itemvalue="Kotlin.chapter4.TimerExampleKt" />
-        <item itemvalue="Kotlin.chapter4.INtervalExampleKt" />
       </list>
     </recent_temporary>
   </component>
@@ -389,7 +400,7 @@
       <workItem from="1554247162594" duration="599000" />
       <workItem from="1554295437320" duration="1040000" />
       <workItem from="1554333576670" duration="50000" />
-      <workItem from="1554380323762" duration="1062000" />
+      <workItem from="1554380323762" duration="1796000" />
     </task>
     <task id="LOCAL-00001" summary="Observable Class">
       <created>1553943193388</created>
@@ -426,17 +437,24 @@
       <option name="project" value="LOCAL" />
       <updated>1554204712692</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="switchMap">
+      <created>1554381400372</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1554381400373</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30019000" />
+    <option name="totallyTimeSpent" value="30753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23748669" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23748669" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -445,7 +463,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32139093" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32139093" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -520,7 +538,8 @@
     <MESSAGE value="interval()" />
     <MESSAGE value="timer()" />
     <MESSAGE value="intervalRange(), interval로 intervalRange()함수 만들기" />
-    <option name="LAST_COMMIT_MESSAGE" value="intervalRange(), interval로 intervalRange()함수 만들기" />
+    <MESSAGE value="switchMap" />
+    <option name="LAST_COMMIT_MESSAGE" value="switchMap" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/ObservableFromCallable.kt" />
@@ -686,6 +705,13 @@
           <folding>
             <element signature="e#18#85#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/chapter4/GroupByExample.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
         </state>
       </provider>
     </entry>
